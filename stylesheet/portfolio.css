@@ -7,10 +7,10 @@ body {
 /* Heading 1 elements */
 h1 {
     text-transform: uppercase; /* Capitalizing all h1 headings */
-    font-family: "Trebuchet MS", Optima; /* Sets the font family of all h1 headings */
+    font-family: "Georgia", Serif; /* Sets the font family of all h1 headings */
     text-align: center; /* Centering all h1 elements */
     margin-top: 3%; /* Adds a small margin above h1 elements */
-    color: #1a1a1a; 
+    color: pink; 
 }
 
 /* Heading 1 element hover effect */
@@ -21,8 +21,8 @@ h1:hover {
 }
 
 /* Styling for portfolio title text */
-.white-text {
-    color: #fff; /* This is used to change the color of the portfolio title text */
+.pink-text {
+    color: pink; /* This is used to change the color of the portfolio title text */
 }
 
 /* Paragraph elements */
@@ -54,7 +54,7 @@ p:hover {
 
 /* Anchor elements */
 a {
-    color: blue; /* This ensures all links are blue */
+    color: red; /* This ensures all links are red */
 }
 
 /* Quotation elements */
@@ -92,14 +92,14 @@ img:hover {
 /* Styling for footer element */
 footer {
     padding: 2%; /* This gives the footer padding that is equal to 2% of the width of the element's area */
-    background-color: white;
+    background-color: blue;
 }
 /***** END OF GENERAL STYLING *****/
 
 /***** NAVBAR STYLING *****/
 .Navbar {
     overflow: hidden; /* This ensures that any content that overflows beyond the boundary of our nav bar is not displayed */
-    background-color: black; /* This colors the navbar black */
+    background-color: blue; /* This colors the navbar black */
     position: fixed; /* This keeps the navbar at the top of the screen as we scroll */
     top: 0; /* This ensures no space is displayed above the navbar */
     width: 100%; /* This makes the navbar span the entire width of the page */
@@ -118,7 +118,7 @@ footer {
 .Navbar a {
     float: left; /* This specifies that the text floats on the left on the navbar */
     display: block; /* This ensures that other text will be displayed on the same line or row, instead of a new line */
-    color: white; /* This is the font color for text on our navbar */
+    color: lightblue; /* This is the font color for text on our navbar */
     padding: 14px 16px; /* This adds padding around our text */
     text-decoration: none; /* This gets rid of the underlines under the text on our navbar */
     font-family: Avant Garde, Helvetica; /* This specifies the font family for text on our navbar */
@@ -145,30 +145,31 @@ footer {
 
 /* Navbar hover effects */
 .Navbar a:hover {
-    background-color: #f4f4f4; /* Defines the background color that will display when you hover over the link */
-    color: black; /* This defines the font color that will display when navbar a elements are hovered over */
+    background-color: lighblue; /* Defines the background color that will display when you hover over the link */
+    color: pink; /* This defines the font color that will display when navbar a elements are hovered over */
     font-weight: bold; /* This makes the text on the navbar bold when hovered over */
 }
 
 /* Navbar home button */
 .Navbar a.active { /* This targets the a element on the navbar with the "active" class */
-    background-color: darkgray;
+    background-color: blue;
 }
 /***** END OF NAVBAR STYLING *****/
 
 /***** VIDEO STYLING *****/
 /* Formatting for background video */
-#Typing_Video {
+#Robot_Video {
     position: fixed; /* This fixes the video to the page */
     right: 0; /* This ensures there is no space between the edge of the video and the edge of the page */
     bottom: 0; /* This ensures no space between the bottom of the video and the bottom of the page */
     min-width: 100%; /* This ensures the video is displayed across the full width of the page */
     z-index: -1; /* This places the video behind the other elements on the page */
+	min-height: 100%;
 }
 
 /* Screens that are 576px and smaller will not display the background video */
 @media screen and (max-width: 576px) {
-    #Typing_Video {
+    #Robot_Video {
         display: none;
     }
 }
@@ -202,7 +203,7 @@ footer {
     padding: 10px;
     padding-top: 3%; /* This ensures there is space between the top of the column and our headings */
     height: 400px; /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
-    background-color: #f2f2f2; /* Sets the background color of the columns with class Column_1 */
+    background-color: blue; /* Sets the background color of the columns with class Column_1 */
 }
 
 /* Screens 576px and smaller will display a scroll bar if the text overflows the column height */
@@ -218,7 +219,7 @@ footer {
     padding: 10px;
     padding-top: 1.9%;
     height: 400px;
-    background-color: #4d4d4d;
+    background-color: lightblue;
 }
 
 /* This class is applied to the columns in the final row, overriding the height and padding to provide more room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
@@ -280,7 +281,7 @@ input[type=submit]:hover {
 /* Form element */
 form {
     border-radius: 5px; /* Rounds the corners of the contact form */
-    background-color: #f2f2f2; 
+    background-color: blue; 
     padding: 10px; /* Adds padding to the contact form */
     font-family: "Trebuchet MS", Optima;
 }
