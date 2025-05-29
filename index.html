@@ -14,14 +14,11 @@
         <!--Navbar-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()" class="contact">Contact</a>
         </div>
-
-        <!--Breaks inserted to add space between navbar and the first heading-->
-        <br>
-        <br>
 
         <!--Background video-->
         <div id="Home">
@@ -36,7 +33,7 @@
         <div class="Video_Text">
             <h1 class="pink-text">Welcome to my Portfolio</h1>
             <strong>
-                <p class="center">
+                <p class="center qoute">
                     <q> It's alive, it's ALIVE…! </q>
                     <br> - Victor Frankenstein
                     <br>
@@ -45,6 +42,58 @@
                     <br> Thank you for stopping by and enjoy! 
                 </p>
             </strong>
+        </div>
+
+        <!-- Slideshow section -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- Slide 1 of 6 -->
+                    <div class="mySlides fade" style="display: none;">
+                        <img class="Slideshow_Images" src="images/Joseph Rodriguez.jpg">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- Slide 2 of 6 -->
+                    <div class="mySlides fade" style="display: none;">
+                        <img class="Slideshow_Images" src="images/FullStack.jpg"> 
+                        <div class="text">I am a full-stack software developer,<br> trained in:<br>HTML, CSS, JavaScript,</div>
+                    </div>
+                    <!-- Slide 3 of 6 -->
+                    <div class="mySlides fade" style="display: block;">
+                        <img class="Slideshow_Images" src="images/pythonlogo.jpg">
+                        <div class="text">the popular programming language Python,</div>
+                    </div>
+                    <!-- Slide 4 of 6 -->
+                    <div class="mySlides fade" style="display: none;">
+                        <img class="Slideshow_Images" src="images/CandCplusplus.jpg">
+                        <div class="text">C/C++ programming language, </div>
+                    </div>
+                    <!-- Slide 5 of 6 -->
+                    <div class="mySlides fade" style="display: none;">
+                        <img class="Slideshow_Images" src="images/Assembly.jpg"> 
+                        <div class="text">Assembly language, a low-level language.</div>
+                    </div>
+                    <!-- Slide 6 of 6 -->
+                    <div class="mySlides fade" style="display: none;">
+                        <img class="Slideshow_Images" src="images/coding.jpg"> 
+                        <div class="text"><a class="white-text contact" onclick="openForm()">Contact me now!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">❮</a>
+                    <a class="Next" onclick="plusSlides(1)">❯</a>
+                </div>
+                <br> <!-- Adds a space between the slideshow images and the dots -->
+
+                <!-- Slideshow dots (these are another way for users to navigate through the slideshow) -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot active" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
         </div>
 
         <!--About section-->
@@ -85,34 +134,31 @@
             </div>
         </div>
 
-        <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="images/dogs.jpg" alt="Contact_Image">
-            </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
+        <!-- Contact form -->
+        <div id="Contact">
+           <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+           <div class="form-popup" id="myForm" ondblclick="closeForm()" style="display: none;">
+                <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> <!-- Here we are using a free online service from https://formspree.io/ to send our contact form to an email address of our choosing - note: it will not run unless live on the internet, you have to push it to your online website first -->
                 <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
+                    <label for="name"><b>Name</b></label>
+                      <input type="text" placeholder="Type your name here" name="name" required="">
+                    <label for="phone"><b>Phone</b></label>
+                      <input type="text" placeholder="Type your phone number here" name="phone">
+                    <label for="email"><b>Email</b></label>		
+                      <input type="text" placeholder="Type your email address here" name="email" required="">
+                    <label for="message"><b>Message</b></label>
+                      <input type="text" placeholder="Type your message here" name="message">
+         
+                    <button type="submit" class="btn">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
                 </form>
             </div>
         </div>
-
-        <!--Footer section-->
+        
+        <!-- Footer section -->
         <footer>
-            <p>
-                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
-                <br>
-            </p>
+                <p class="center">© Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p><br>
         </footer>
-    </body>
-</html>
+        <script src="javascript/sample_portfolio.js"></script>
+    
+<script>'undefined'=== typeof _trfq || (window._trfq = []);'undefined'=== typeof _trfd && (window._trfd=[]),_trfd.push({'tccl.baseHost':'secureserver.net'},{'ap':'cpsh-oh'},{'server':'p3plzcpnl507399'},{'dcenter':'p3'},{'cp_id':'5821630'},{'cp_cl':'8'}) // Monitoring performance to make your website faster. If you want to opt-out, please contact web hosting support.</script><script src="https://img1.wsimg.com/traffic-assets/js/tccl.min.js"></script><span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
